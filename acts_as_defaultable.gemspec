@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = ActsAsDefaultable::VERSION
   s.authors     = ["Giorgos Tsiftsis"]
   s.email       = ["giorgos.tsiftsis@gmail.com"]
-  #s.homepage    = "github"
+  s.homepage    = "https://github.com/chief/acts_as_defaultable"
   s.summary     = "A gem allowing an active_record model to be default(unique) based on a specified column"
   s.description = "This 'acts_as' extension provides the capability for having a default object. The class that has this specified needs to have a default column defined as an integer, string or boolean on the mapped database table"
 

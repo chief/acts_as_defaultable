@@ -1,3 +1,5 @@
 = ActsAsDefaultable
 
-This project rocks and uses MIT-LICENSE.
+This 'acts_as' extension provides the capability for having a default object. The class that has this specified needs to have a default column defined as an integer, string or boolean on the mapped database table
+
+This project MIT-LICENSE.

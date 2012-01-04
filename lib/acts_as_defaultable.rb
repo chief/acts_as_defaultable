@@ -11,12 +11,6 @@ module ActsAsDefaultable
       column = options.first.to_sym
       puts "acts_as_defaultable: Specify a column #{column} in #{self.to_s}" unless self.column_names.include?(column.to_s)
 
-      default_column_method = %(
-        def self.default_column
-          "#{column.to_sym}"
-        end
-      )
-
       if self.column_names.include?(column.to_s)
         positive_value =
           case self.columns_hash[column.to_s].type
@@ -39,17 +33,23 @@ module ActsAsDefaultable
           end
       end
 
-      class_eval <<-EOF
-
-        #{default_column_method}
+      class_methods = %(
+        def self.default_column
+          "#{column.to_sym}"
+        end
 
         def self.default_positive_value
-          #{positive_value}
+          "#{positive_value}"
         end
 
         def self.default_negative_value
-          #{negative_value}
+          "#{negative_value}"
         end
+      )
+
+      class_eval <<-EOF
+
+        #{class_methods}
 
         def self.default
           self.all_defaults.first

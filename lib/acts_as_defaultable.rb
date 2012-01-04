@@ -19,7 +19,7 @@ module ActsAsDefaultable
           when :boolean
             true
           when :string
-            'on'
+            "'on'"
           end
 
         negative_value =
@@ -29,7 +29,7 @@ module ActsAsDefaultable
           when :boolean
             false
           when :string
-            'off'
+            "'off'"
           end
       end
 
@@ -39,11 +39,11 @@ module ActsAsDefaultable
         end
 
         def self.default_positive_value
-          "#{positive_value}"
+          #{positive_value}
         end
 
         def self.default_negative_value
-          "#{negative_value}"
+          #{negative_value}
         end
       )
 

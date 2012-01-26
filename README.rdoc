@@ -12,7 +12,7 @@ In your Gemfile
 
   gem 'acts_as_defaultable'
 
-Currently is tested on rails3.2.0.rc1, ruby 1.9.3 and mysql
+Currently is tested on rails3.2.0.rc1, rails3.2.0.rc2, ruby 1.9.3 and mysql
 
 == Example
 
@@ -28,6 +28,8 @@ Currently is tested on rails3.2.0.rc1, ruby 1.9.3 and mysql
   uk.default = true
   uk.save
   Country.default == gr # => false
+
+If no options provived +default+ column is assumed.
 
 == Notes
 

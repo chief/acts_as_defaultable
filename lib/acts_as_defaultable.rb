@@ -8,7 +8,9 @@ module ActsAsDefaultable
 
       after_save :set_unique_default
 
-      column = options.first.to_sym
+      column    = options.first.to_sym unless options.blank?
+      column  ||= :default
+
       puts "acts_as_defaultable: Specify a column #{column} in #{self.to_s}" unless self.column_names.include?(column.to_s)
 
       if self.column_names.include?(column.to_s)

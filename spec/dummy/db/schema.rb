@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120105110842) do
-=======
-ActiveRecord::Schema.define(:version => 20120104234100) do
->>>>>>> a78d85a48420ac87365e2329405c3644dc18a672
 
   create_table "anothers", :force => true do |t|
     t.string   "test"
@@ -52,7 +48,13 @@ ActiveRecord::Schema.define(:version => 20120104234100) do
     t.datetime "updated_at", :null => false
   end
 
-<<<<<<< HEAD
+  create_table "test_defaults", :force => true do |t|
+    t.string   "name"
+    t.boolean  "default",    :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "role"
     t.string   "name"
@@ -65,13 +67,6 @@ ActiveRecord::Schema.define(:version => 20120104234100) do
     t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-=======
-  create_table "test_defaults", :force => true do |t|
-    t.string   "name"
-    t.boolean  "default",    :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
->>>>>>> a78d85a48420ac87365e2329405c3644dc18a672
   end
 
 end

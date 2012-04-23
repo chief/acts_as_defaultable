@@ -1,12 +1,12 @@
-= ActsAsDefaultable
+# ActsAsDefaultable
 
-== Description
+## Description
 
 This 'acts_as' extension provides the capability for having a default object. The class that has this
 specified needs to have a default column defined as an integer, string or boolean on the mapped
 database table.
 
-== Install
+## Install
 
 In your Gemfile
 
@@ -14,7 +14,7 @@ In your Gemfile
 
 Currently is tested on rails3.2.0.rc1, rails3.2.0.rc2, ruby 1.9.3 and mysql
 
-== Example
+## Example
 
   class Country < ActiveRecord::Base
     acts_as_defaultable :default
@@ -31,10 +31,14 @@ Currently is tested on rails3.2.0.rc1, rails3.2.0.rc2, ruby 1.9.3 and mysql
 
 If no options provived +default+ column is assumed.
 
-== Notes
+## Notes
 
 The option to acts_as_defaultable is the +column+ of the Model that defines default behaviour.
 This column can be a string, a boolean or an integer with default positive values 'on', true, 1
 and default negative values 'off', false, 0 respectively.
+
+## License
+
+MIT License
 
 

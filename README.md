@@ -29,7 +29,7 @@ Currently is tested on rails3.2, ruby 1.9.3 and mysql
   uk.save
   Country.default == gr # => false
 ```
-If no options provived `default` column is assumed.
+If no options provided `default` column is assumed.
 
 ## Notes
 

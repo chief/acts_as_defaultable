@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe TestDefault do
 
-  let(:one) { Factory.build(:td_one) }
-  let(:two) { Factory.build(:td_two) }
+  let(:one) { FactoryGirl.build(:td_one) }
+  let(:two) { FactoryGirl.build(:td_two) }
 
   it 'should have a class method named default' do
     TestDefault.respond_to?('default').should be_true

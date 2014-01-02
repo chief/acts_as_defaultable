@@ -1,5 +1,8 @@
 # ActsAsDefaultable
 
+[![Build Status](https://travis-ci.org/chief/acts_as_defaultable.png?branch=master)](https://travis-ci.org/chief/acts_as_defaultable)
+[![Code Climate](https://codeclimate.com/github/chief/acts_as_defaultable.png)](https://codeclimate.com/github/chief/acts_as_defaultable)
+
 ## Description
 
 This ``acts_as`` extension provides the capability for having a default object.

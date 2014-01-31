@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/chief/acts_as_defaultable.png?branch=master)](https://travis-ci.org/chief/acts_as_defaultable)
 [![Code Climate](https://codeclimate.com/github/chief/acts_as_defaultable.png)](https://codeclimate.com/github/chief/acts_as_defaultable)
 [![Gem Version](https://badge.fury.io/rb/acts_as_defaultable.png)](http://badge.fury.io/rb/acts_as_defaultable)
+[![Dependency Status](https://gemnasium.com/chief/acts_as_defaultable.png)](https://gemnasium.com/chief/acts_as_defaultable)
 
 ## Description
 

@@ -6,11 +6,11 @@ describe StringDefault do
   let(:two) { FactoryGirl.build(:true_string_default) }
 
   it 'should have a class method named default' do
-    StringDefault.respond_to?('default').should be_true
+    StringDefault.respond_to?('default').should be true
   end
 
   it 'should have a default column definition' do
-    StringDefault.respond_to?('default_column').should be_true
+    StringDefault.respond_to?('default_column').should be true
   end
 
   it 'should return the argument as the default column' do

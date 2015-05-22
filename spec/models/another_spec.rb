@@ -6,11 +6,11 @@ describe Another do
   let(:other) { FactoryGirl.build(:other) }
 
   it 'should have a class method named default' do
-    Another.respond_to?('default').should be_true
+    Another.respond_to?('default').should be true
   end
 
   it 'should have a default column definition' do
-    Another.respond_to?('default_column').should be_true
+    Another.respond_to?('default_column').should be true
   end
 
   it 'should return the argument as the default column' do

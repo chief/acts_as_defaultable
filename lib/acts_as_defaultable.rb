@@ -8,14 +8,16 @@ module ActsAsDefaultable
 
       after_save :set_unique_default
 
-      column    = options.first.to_sym unless options.blank?
-      column  ||= :default
+      column = options.first
+      column ||= :default
+      column = column.to_s
 
-      puts "acts_as_defaultable: Specify a column #{column} in #{self.to_s}" unless self.column_names.include?(column.to_s)
 
-      if self.column_names.include?(column.to_s)
+      puts "acts_as_defaultable: Specify a column #{column} in #{self}" unless column_names.include?(column)
+
+      if column_names.include?(column)
         positive_value =
-          case self.columns_hash[column.to_s].type
+          case columns_hash[column].type
           when :integer
             1
           when :boolean
@@ -25,7 +27,7 @@ module ActsAsDefaultable
           end
 
         negative_value =
-          case self.columns_hash[column.to_s].type
+          case columns_hash[column].type
           when :integer
             0
           when :boolean
@@ -37,7 +39,7 @@ module ActsAsDefaultable
 
       class_methods = %(
         def self.default_column
-          "#{column.to_sym}"
+          "#{column}"
         end
 
         def self.default_positive_value
@@ -54,11 +56,11 @@ module ActsAsDefaultable
         #{class_methods}
 
         def self.default
-          self.all_defaults.first
+          all_defaults.first
         end
 
         def self.all_defaults
-          where(self.default_column.to_sym => self.default_positive_value)
+          where(default_column => default_positive_value)
         end
 
         def set_unique_default

@@ -11,11 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120105110842) do
+ActiveRecord::Schema.define(:version => 20150522160050) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "name"
+    t.boolean  "main"
+    t.string   "main_blog_post"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "anothers", :force => true do |t|
     t.string   "test"
     t.integer  "unique"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "blog_posts", :force => true do |t|
+    t.string   "text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -46,6 +60,14 @@ ActiveRecord::Schema.define(:version => 20120105110842) do
     t.boolean  "default",    :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.boolean  "default"
+    t.integer  "default_blog_post"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
 end

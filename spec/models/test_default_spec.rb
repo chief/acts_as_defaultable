@@ -6,11 +6,11 @@ describe TestDefault do
   let(:two) { FactoryGirl.build(:td_two) }
 
   it 'should have a class method named default' do
-    TestDefault.respond_to?('default').should be_true
+    TestDefault.respond_to?('default').should be true
   end
 
   it 'should have a default column definition' do
-    TestDefault.respond_to?('default_column').should be_true
+    TestDefault.respond_to?('default_column').should be true
   end
 
   it 'should return the argument as the default column' do

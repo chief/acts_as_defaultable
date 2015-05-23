@@ -6,11 +6,11 @@ describe BooleanDefault do
   let(:two) { FactoryGirl.build(:true_boolean_default) }
 
   it 'should have a class method named default' do
-    BooleanDefault.respond_to?('default').should be_true
+    BooleanDefault.respond_to?('default').should be true
   end
 
   it 'should have a default column definition' do
-    BooleanDefault.respond_to?('default_column').should be_true
+    BooleanDefault.respond_to?('default_column').should be true
   end
 
   it 'should return the argument as the default column' do
